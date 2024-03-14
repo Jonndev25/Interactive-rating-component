@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Dark-Blue-2: rgb(52, 60, 70);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  background-color: var(--Very-Dark-Blue);
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  max-width: 412px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .rating {
+  background: var(--Dark-Blue);
+  width: 100%;
+  padding: 1.8em;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+
+.rating .icon-star {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: var(--Dark-Blue-2);
+  display: grid;
+  place-content: center;
+  margin-bottom: 2.2em;
+}
+
+.rating .icon-star img {
+  width: 17px;
+}
+
+.rating h1 {
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.622rem;
+  margin-bottom: 0.45em;
+}
+
+.rating p {
+  color: var(--Light-Grey);
+  line-height: 1.67;
+  margin-bottom: 1.5em;
+}
+
+.rating ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+.rating ul li {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-content: center;
+  color: var(--Light-Grey);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: var(--Dark-Blue-2);
+  cursor: pointer;
+}
+
+.rating ul li:hover {
+  background: var(--Orange);
+  color: var(--White);
+}
+
+.rating ul .focus {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
+
+.rating button {
+  background: var(--Orange);
+  width: 100%;
+  border-radius: 3em;
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  -ms-border-radius: 3em;
+  -o-border-radius: 3em;
+  padding: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--White);
+  border: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.rating button:hover {
+  background: var(--White);
+  color: var(--Orange);
+}
+
+/* thank you card  start here */
+main .thank-you {
+  width: 100%;
+  padding: 1.8em 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: var(--Dark-Blue);
+  border-radius: 1.5em;
+  display: none;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
+}
+
+.thank-you > img {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+
+.thank-you .selected {
+  border-radius: 2.5em;
+  background: var(--Dark-Blue-2);
+  width: fit-content;
+  margin: auto;
+  padding: 0.3em 0.5em;
+  color: var(--Orange);
+  margin-bottom: 1.5em;
+}
+
+.thank-you h2 {
+  color: var(--White);
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.thank-you p {
+  line-height: 1.5;
+  color: var(--Light-Grey);
+}
+
+main .fade-in {
+  display: flex;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+}
+
+main .fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+  to {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 412px;
+    width: 100%;
+  }
+  main .rating, main .thank-you {
+    padding: 2.2em;
+  }
+  .rating ul li {
+    width: 52px;
+    height: 52px;
+  }
+}
